@@ -1,6 +1,6 @@
 rOne = ['-','-','-']
 rTwo = ['-','-','-']
-rThree = ['-','=','-']
+rThree = ['-','-','-']
 def printBoard(fR, sR, tR):
     print(fR)
     print(sR)
@@ -28,9 +28,25 @@ def winQuestion(fR, sR, tR):
     if tR[0] == tR[1] == tR[2]:
         return True
     return False
+def playerAction(row,column,pCount):
+    row[column] = returnCounter(pCount)
+
+playerCount = 1
 
 printBoard(rOne, rTwo, rThree)
 a = winQuestion(rOne,rTwo,rThree)
 print(a)
+while True:
+    x = int(input('x:'))
+    y = int(input('y:'))
+    y -= 1
+    if int(x) == 1:
+        playerAction(rOne, int(y), playerCount)
+    if int(x) == 2:
+        playerAction(rTwo, int(y), playerCount)
+    if int(x) == 3:
+        playerAction(rThree, int(y), playerCount)
+    playerCount += 1
+    printBoard(rOne,rTwo,rThree)
 
 
