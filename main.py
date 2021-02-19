@@ -6,7 +6,6 @@ def printBoard(fR, sR, tR):
     print(1,fR)
     print(2,sR)
     print(2,tR)
-    print('\n')
 def returnCounter(count):
     if count % 2 == 0:
         return '0'
@@ -59,19 +58,17 @@ def prodAns(row,column):
 
 
 print("Welcome to 0's and X's!")
-startFlag = True
-while startFlag:
+while True:
     chooser = input('what do you want start with "X" or "O":').upper()
     if chooser == "X":
         playerCount = 1
-        startFlag = False
-    elif chooser == "0" or "O":
+        break
+    if chooser == "0" or "O":
         playerCount = 2
-        startFlag = False
-    else:
-        print("You've not made a vaild selection")
-flag = True
-while flag:
+        break
+    print("You've not made a vaild selection")
+
+while playerCount == 1 or 2:
     printBoard(rOne,rTwo,rThree)
     whoIsPlaying(playerCount)
     restarter = inputFunc(playerCount, rOne, rTwo, rThree)
