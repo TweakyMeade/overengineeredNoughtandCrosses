@@ -85,6 +85,7 @@ while True:
         print('that was an invalid input try again')
     if winQuestion(rOne, rTwo, rThree):
         print("YOU ARE WINNER:", returnCounter(playerCount-1))
+        printBoard(rOne, rTwo, rThree)
         break
     if roundCount == 0:
         print("NO ONE WINS THE EASIEST GAME IN THE WORLD!")
