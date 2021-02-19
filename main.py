@@ -8,10 +8,14 @@ def XOChoice():
             return int(2)
         print("You've not made a vaild selection")
 def printBoard(fR, sR, tR):
-    print('    1    2    3')
-    print(1,fR)
-    print(2,sR)
-    print(2,tR)
+    print('')
+    fRS= fR[0] + fR[1] + fR[2]
+    sRS = sR[0] + sR[1] + sR[2]
+    tRS = tR[0] + tR[1] + tR[2]
+    print('  123')
+    print('1',fRS)
+    print('2',sRS)
+    print('3',tRS)
 def returnCounter(count):
     if count % 2 == 0:
         return '0'
