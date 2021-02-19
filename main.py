@@ -1,6 +1,12 @@
-rOne = ['-','-','-']
-rTwo = ['-','-','-']
-rThree = ['-','-','-']
+def XOChoice():
+    while True:
+        chooser = input('what do you want start with "X" or "O":').upper()
+        if chooser == "X":
+            return int(1)
+
+        if chooser == "O":
+            return int(2)
+        print("You've not made a vaild selection")
 def printBoard(fR, sR, tR):
     print('    1    2    3')
     print(1,fR)
@@ -58,16 +64,11 @@ def prodAns(row,column):
 
 
 print("Welcome to 0's and X's!")
-while True:
-    chooser = input('what do you want start with "X" or "O":').upper()
-    if chooser == "X":
-        playerCount = 1
-        break
-    if chooser == "0" or "O":
-        playerCount = 2
-        break
-    print("You've not made a vaild selection")
-
+rOne = ['-','-','-']
+rTwo = ['-','-','-']
+rThree = ['-','-','-']
+playerCount = XOChoice()
+print(playerCount)
 while playerCount == 1 or 2:
     printBoard(rOne,rTwo,rThree)
     whoIsPlaying(playerCount)
