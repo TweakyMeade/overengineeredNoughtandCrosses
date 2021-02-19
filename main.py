@@ -2,9 +2,10 @@ rOne = ['-','-','-']
 rTwo = ['-','-','-']
 rThree = ['-','-','-']
 def printBoard(fR, sR, tR):
-    print(fR)
-    print(sR)
-    print(tR)
+    print('    1    2    3')
+    print(1,fR)
+    print(2,sR)
+    print(2,tR)
     print('\n')
 def returnCounter(count):
     if count % 2 == 0:
