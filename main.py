@@ -69,7 +69,6 @@ rTwo = ['-', '-', '-']
 rThree = ['-', '-', '-']
 playerCount = XOChoice()
 roundCount = 9
-print(playerCount)
 while True:
     printBoard(rOne, rTwo, rThree)
     whoIsPlaying(playerCount)
@@ -80,8 +79,8 @@ while True:
     else:
         print('that was an invalid input try again')
     if winQuestion(rOne, rTwo, rThree):
-        print("YOU ARE WINNER:", returnCounter(playerCount - 1))
         printBoard(rOne, rTwo, rThree)
+        print("YOU ARE WINNER:", returnCounter(playerCount - 1))
         break
     if roundCount == 0:
         print("NO ONE WINS THE EASIEST GAME IN THE WORLD!")
