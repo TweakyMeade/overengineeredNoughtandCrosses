@@ -1,3 +1,4 @@
+
 def XOChoice():
     while True:
         chooser = input('what do you want start with "X" or "O":').upper()
@@ -42,7 +43,7 @@ def playerAction(row, column, pCount):
     row[column] = returnCounter(pCount)
 def inputFunc(pCount, rowOne, rowTwo, rowThree):
     x = int(input('Which row do you choose? "1","2" or "3":'))
-    y = int(input('Which column do you choose? "1","2" or "3"')) - 1
+    y = int(input('Which column do you choose? "1","2" or "3":')) - 1
     if int(x) == 1:
         if prodAns(rowOne, int(y), ):
             playerAction(rowOne, int(y), pCount)
