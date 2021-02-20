@@ -1,19 +1,19 @@
 
 def XOChoice():
     while True:
-        chooser = input('what do you want start with "X" or "O":').upper()
+        chooser = input('What do you want start with "X" or "O"?:').upper()
         if chooser == "X":
             return int(1)
 
         if chooser == "O":
             return int(2)
-        print("You've not made a valid selection")
+        print("You've not made a valid selection!")
 def printBoard(fR, sR, tR):
     print('')
     fRS = fR[0] + fR[1] + fR[2]
     sRS = sR[0] + sR[1] + sR[2]
     tRS = tR[0] + tR[1] + tR[2]
-    print('  123')
+    print('% 123')
     print('1', fRS)
     print('2', sRS)
     print('3', tRS)
@@ -42,8 +42,8 @@ def winQuestion(fR, sR, tR):
 def playerAction(row, column, pCount):
     row[column] = returnCounter(pCount)
 def inputFunc(pCount, rowOne, rowTwo, rowThree):
-    x = int(input('Which row do you choose? "1","2" or "3":'))
-    y = int(input('Which column do you choose? "1","2" or "3":')) - 1
+    x = int(input('Which row do you choose? "1","2" or "3"?:'))
+    y = int(input('Which column do you choose? "1","2" or "3"?:')) - 1
     if int(x) == 1:
         if prodAns(rowOne, int(y), ):
             playerAction(rowOne, int(y), pCount)
@@ -59,9 +59,9 @@ def inputFunc(pCount, rowOne, rowTwo, rowThree):
     return False
 def whoIsPlaying(pCount):
     if pCount % 2 == 0:
-        print('Now its 0!')
+        print("Now it's 0 go!!")
     else:
-        print('now its X go!')
+        print("now it's X go!")
 def prodAns(row, column):
     return row[column] == '-'
 print("Welcome to 0's and X's!")
@@ -78,12 +78,12 @@ while True:
         playerCount += 1
         roundCount -= 1
     else:
-        print('that was an invalid input try again')
+        print('That was an invalid input, try again!')
     if winQuestion(rOne, rTwo, rThree):
         printBoard(rOne, rTwo, rThree)
-        print("YOU ARE WINNER:", returnCounter(playerCount - 1))
+        print("YOU ARE THE WINNER:", returnCounter(playerCount - 1))
         break
     if roundCount == 0:
         print("NO ONE WINS THE EASIEST GAME IN THE WORLD!")
         break
-print("an over thought out solution, to an easy program")
+print("\nAn over thought out solution, to an easy program!")
